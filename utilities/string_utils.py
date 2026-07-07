@@ -1,8 +1,4 @@
-def reverse_string(text: str)->str:
-    return text[::-1]
-def to_uppercase(text: str)->str:
-    return text.upper()
-def to_lowercase(text: str)->str:
-    return text.lower()
-def is_palindrome(text: str)->bool:
-    return text==text[::-1]
+def normalize_text(text:str)->str:
+    return"".join(text.strip().title().split())
+def normalize_for_search(text:str)->str:
+    return"".join(text.strip().lower().split())
